@@ -3,9 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LUX NOIR - Hotel & Resort</title>
+    <link rel="stylesheet" href="home.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
+
+    <!-- HEADER & NAVBAR -->
+    <header class="site-header">
+        <!-- Tag pembuka div ini tadi terhapus, sekarang sudah dikembalikan -->
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="Crown.jpeg" alt="Logo LUX NOIR" class="logo-img">
+                <div class="brand-text">
+                    <h2>LUX NOIR</h2>
+                    <p>HOTEL & RESORT</p>
+                </div>
+            </a>
+
+            <!-- Menu 6 Halaman -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="kamar.html">Kamar</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+
+            <div class="nav-action">
+                <a href="kontak.html" class="btn-yellow-solid">Pesan Kamar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-badge-pill">
+                <i class="fa-solid fa-star"></i> <span>Five-Star Luxury Hospitality</span>
+            </div>
+            <h1 class="hero-heading">Where Elegance<br>Meets <span class="text-highlight">Comfort.</span></h1>
+            <p class="hero-desc">
+                Rasakan pengalaman menginap berkelas dengan desain interior eksklusif, pelayanan hangat, dan ketenangan maksimal di LUX NOIR Hotel.
+            </p>
+            <div class="hero-buttons">
+                <a href="kamar.html" class="btn-yellow-solid">Lihat Kamar <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="galeri.html" class="btn-yellow-outline">Lihat Galeri</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMASI SINGKAT HOTEL -->
+    <section class="info-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">SELAMAT DATANG DI LUX NOIR</span>
+                <h2>Kemewahan & Kenyamanan Abadi</h2>
+                <div class="line-yellow"></div>
+            </div>
+
+            <div class="info-grid">
+                <!-- Card 1 -->
+                <div class="info-card">
+                    <div class="card-icon"><i class="fa-solid fa-bed"></i></div>
+                    <h3>Kamar & Suite Mewah</h3>
+                    <p>Dirancang dengan detail arsitektur modern untuk memberikan kenyamanan istirahat terbaik dengan pemandangan kota yang memukau.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="info-card featured">
+                    <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>Restoran Bintang Lima</h3>
+                    <p>Sajian kuliner autentik dan internasional yang diracik langsung oleh tim chef berpengalaman kami.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="info-card">
+                    <div class="card-icon"><i class="fa-solid fa-spa"></i></div>
+                    <h3>Spa & Relaksasi</h3>
+                    <p>Fasilitas kebugaran dan perawatan spa privat untuk memulihkan energi tubuh dan pikiran Anda selama menginap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="brand-logo footer-logo">
+                    <!-- Logo disesuaikan agar sama dengan header -->
+                    <img src="Crown.jpeg" alt="Logo LUX NOIR" class="logo-img">
+                    <div class="brand-text">
+                        <h2>LUX NOIR</h2>
+                        <p>HOTEL & RESORT</p>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Pilihan utama bagi Anda yang mengutamakan kemewahan, privasi, dan ketenangan di tengah pusat kota.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="fasilitas.html">Fasilitas</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hubungi Kami</h4>
+                <p><i class="fa-solid fa-location-dot yellow-text"></i> Jl. Jenderal Sudirman Kav. 00, Jakarta</p>
+                <p><i class="fa-solid fa-phone yellow-text"></i> (021) 555-0192</p>
+                <p><i class="fa-solid fa-envelope yellow-text"></i> reservation@luxnoirhotel.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LUX NOIR Hotel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
