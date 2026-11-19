@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - LUX NOIR Hotel & Resort</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kontak-login.css">
+    <!-- Google Fonts & Font Awesome (Sama persis dengan Home) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="Crown.jpeg" alt="Logo LUX NOIR" class="logo-img">
+                <div class="brand-text">
+                    <h2>LUX NOIR</h2>
+                    <p>HOTEL & RESORT</p>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kamar.html">Kamar</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
+            </ul>
+
+            <div class="nav-action">
+                <a href="login.html" class="btn-yellow-outline">Login</a>
+                <a href="kamar.html" class="btn-yellow-solid">Pesan Kamar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-badge-pill">
+                <i class="fa-solid fa-concierge-bell"></i> <span>24/7 Concierge & Reservation</span>
+            </div>
+            <h1 class="hero-heading" style="font-size: 46px; margin-bottom: 12px;">Hubungi <span class="yellow-text">Kami</span></h1>
+            <p class="banner-subtitle">Kami siap membantu merencanakan pengalaman menginap tak terlupakan Anda di LUX NOIR.</p>
+        </div>
+    </section>
+
+    <!-- INFORMASI KONTAK HOTEL (Alamat, Telepon, Email) -->
+    <section class="info-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">INFORMASI KONTAK</span>
+                <h2>Layanan Tamu Eksklusif</h2>
+                <div class="line-yellow"></div>
+            </div>
+
+            <!-- 3 Kartu Kontak Utama (Sinkron dengan data di Footer Home) -->
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Alamat Hotel</h3>
+                    <p>Jl. Jenderal Sudirman Kav. 00,<br>Jakarta Pusat, DKI Jakarta 10220</p>
+                </div>
+
+                <div class="info-card featured">
+                    <div class="card-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h3>Nomor Telepon</h3>
+                    <p>Resepsionis & Reservasi (24 Jam):<br><strong class="yellow-text">(021) 555-0192</strong></p>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <h3>Email Resmi</h3>
+                    <p>Reservasi & Layanan VIP:<br><strong class="yellow-text">reservation@luxnoirhotel.com</strong></p>
+                </div>
+            </div>
+
+            <!-- FORMULIR KIRIM PESAN & LOKASI -->
+            <div class="contact-wrapper">
+                <div class="contact-form-box">
+                    <span class="sub-title">KIRIM PESAN</span>
+                    <h3>Reservasi & Pertanyaan Khusus</h3>
+                    <form id="contactForm" onsubmit="kirimPesanKontak(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nama">Nama Lengkap</label>
+                                <input type="text" id="nama" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Alamat Email</label>
+                                <input type="email" id="email" placeholder="nama@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subjek">Subjek / Keperluan</label>
+                            <select id="subjek">
+                                <option value="Reservasi Kamar">Reservasi Kamar & Suite</option>
+                                <option value="Layanan VIP">Layanan VIP & Event</option>
+                                <option value="Pertanyaan Umum">Pertanyaan Umum</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pesan">Pesan Anda</label>
+                            <textarea id="pesan" rows="4" placeholder="Tuliskan detail permintaan atau pertanyaan Anda..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-yellow-solid w-100">
+                            Kirim Pesan <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <p id="contactAlert" class="form-feedback"></p>
+                    </form>
+                </div>
+
+                <div class="contact-hours-box">
+                    <span class="sub-title">JAM OPERASIONAL</span>
+                    <h3>Waktu Layanan Hotel</h3>
+                    <ul class="hours-list">
+                        <li><span>Check-In</span> <strong class="yellow-text">14:00 WIB</strong></li>
+                        <li><span>Check-Out</span> <strong class="yellow-text">12:00 WIB</strong></li>
+                        <li><span>Resepsionis</span> <strong>24 Jam Setiap Hari</strong></li>
+                        <li><span>Restoran Bintang Lima</span> <strong>06:00 – 23:00 WIB</strong></li>
+                        <li><span>Spa & Relaksasi</span> <strong>09:00 – 21:00 WIB</strong></li>
+                    </ul>
+                    <div class="vip-note">
+                        <i class="fa-solid fa-crown yellow-text"></i>
+                        <p>Member LUX NOIR mendapatkan akses prioritas check-in dan layanan concierge personal. <a href="login.html" class="yellow-text" style="text-decoration: underline;">Login di sini</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="brand-logo footer-logo">
+                    <img src="Crown.jpeg" alt="Logo LUX NOIR" class="logo-img">
+                    <div class="brand-text">
+                        <h2>LUX NOIR</h2>
+                        <p>HOTEL & RESORT</p>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Pilihan utama bagi Anda yang mengutamakan kemewahan, privasi, dan ketenangan di tengah pusat kota.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="fasilitas.html">Fasilitas</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hubungi Kami</h4>
+                <p><i class="fa-solid fa-location-dot yellow-text"></i> Jl. Jenderal Sudirman Kav. 00, Jakarta</p>
+                <p><i class="fa-solid fa-phone yellow-text"></i> (021) 555-0192</p>
+                <p><i class="fa-solid fa-envelope yellow-text"></i> reservation@luxnoirhotel.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LUX NOIR Hotel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+</html>

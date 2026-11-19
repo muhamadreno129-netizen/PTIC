@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Member - LUX NOIR Hotel & Resort</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kontak-login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="Crown.jpeg" alt="Logo LUX NOIR" class="logo-img">
+                <div class="brand-text">
+                    <h2>LUX NOIR</h2>
+                    <p>HOTEL & RESORT</p>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kamar.html">Kamar</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+
+            <div class="nav-action">
+                <a href="kontak.html" class="btn-yellow-solid">Pesan Kamar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- LOGIN SECTION -->
+    <section class="login-section">
+        <div class="hero-overlay"></div>
+        <div class="container login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <img src="Crown.jpeg" alt="Logo LUX NOIR" class="login-crown">
+                    <span class="sub-title">MEMBER & STAFF PORTAL</span>
+                    <h2>Selamat Datang Kembali</h2>
+                    <p>Silakan masuk untuk mengelola reservasi dan akses eksklusif LUX NOIR.</p>
+                </div>
+
+                <!-- Kotak Alert Notifikasi JavaScript -->
+                <div id="loginAlert" class="login-alert" style="display: none;"></div>
+
+                <form id="loginForm" onsubmit="validasiLogin(event)">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="username" placeholder="Masukkan username Anda" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="Masukkan password Anda">
+                            <button type="button" class="toggle-pass" onclick="togglePassword()" aria-label="Lihat Password">
+                                <i id="eyeIcon" class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="remember"> Ingat sesi saya
+                        </label>
+                        <a href="kontak.html" class="forgot-link">Butuh bantuan akses?</a>
+                    </div>
+
+                    <button type="submit" class="btn-yellow-solid w-100">
+                        Masuk ke Akun <i class="fa-solid fa-right-to-bracket"></i>
+                    </button>
+                </form>
+
+                <!-- Info Akun Demo untuk Pengujian Tugas -->
+                <div class="demo-credentials">
+                    <p><i class="fa-solid fa-circle-info yellow-text"></i> <strong>Akun Pengujian (Demo):</strong></p>
+                    <small>Username: <code>admin</code> | Password: <code>luxnoir123</code></small><br>
+                    <small>Username: <code>tamu</code> | Password: <code>vip2026</code></small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="brand-logo footer-logo">
+                    <img src="Crown.jpeg" alt="Logo LUX NOIR" class="logo-img">
+                    <div class="brand-text">
+                        <h2>LUX NOIR</h2>
+                        <p>HOTEL & RESORT</p>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Pilihan utama bagi Anda yang mengutamakan kemewahan, privasi, dan ketenangan di tengah pusat kota.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="fasilitas.html">Fasilitas</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hubungi Kami</h4>
+                <p><i class="fa-solid fa-location-dot yellow-text"></i> Jl. Jenderal Sudirman Kav. 00, Jakarta</p>
+                <p><i class="fa-solid fa-phone yellow-text"></i> (021) 555-0192</p>
+                <p><i class="fa-solid fa-envelope yellow-text"></i> reservation@luxnoirhotel.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LUX NOIR Hotel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+</html>
