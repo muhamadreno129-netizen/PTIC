@@ -1,0 +1,217 @@
+.rooms-hero-section {
+    position: relative;
+    padding: 100px 0 140px;
+    background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=85') center/cover no-repeat;
+    text-align: center;
+}
+
+.rooms-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9));
+}
+
+.hero-subtext {
+    color: var(--text-gray);
+    font-size: 15px;
+    max-width: 600px;
+    margin: 15px auto 0;
+}
+
+/* Lengkungan (Curve Bottom) ala Tema Rotal Palace */
+.hero-curve-bottom {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 3;
+}
+
+.hero-curve-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+/* SECTION DAFTAR KAMAR */
+.rooms-section {
+    padding: 40px 0 100px;
+    background-color: var(--bg-black);
+}
+
+/* GRID LAYOUT KAMAR */
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* DESAIN KARTU KAMAR (ROOM CARD) */
+.room-card {
+    background-color: #121212;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--yellow);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+}
+
+.room-card.featured-room {
+    border-color: var(--yellow);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+}
+
+/* FOTO KAMAR */
+.room-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.room-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.room-card:hover .room-img {
+    transform: scale(1.08);
+}
+
+/* BADGE/LABEL KAMAR */
+.room-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--text-white);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.room-badge.gold-badge {
+    background: var(--yellow);
+    color: #000;
+    border: none;
+}
+
+/* KONTEN KARTU KAMAR */
+.room-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.room-header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.room-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--text-white);
+}
+
+.room-rating {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.room-desc {
+    color: var(--text-gray);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* FASILITAS KAMAR (AMENITIES) */
+.room-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 20px;
+}
+
+.room-amenities span {
+    font-size: 12px;
+    color: var(--text-gray);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.room-amenities i {
+    color: var(--yellow);
+}
+
+/* HARGA & FOOTER KARTU */
+.room-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.room-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-amount {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+.price-period {
+    font-size: 11px;
+    color: var(--text-gray);
+}
+
+/* DESAIN RESPONSIF UNTUK PERANGKAT MOBILE & TABLET */
+@media (max-width: 992px) {
+    .rooms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+    .room-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .room-footer .btn-yellow-solid {
+        width: 100%;
+    }
+}

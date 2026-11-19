@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilihan Kamar & Suite - LUX NOIR Hotel & Resort</title>
+    <link rel="stylesheet" href="kamar.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="Crown.jpeg" alt="Logo LUX NOIR" class="logo-img">
+                <div class="brand-text">
+                    <h2>LUX NOIR</h2>
+                    <p>HOTEL & RESORT</p>
+                </div>
+            </a>
+
+            <!-- Menu 6 Halaman -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kamar.html" class="active">Kamar</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+
+            <div class="nav-action">
+                <a href="kontak.html" class="btn-yellow-solid">Pesan Kamar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER KAMAR -->
+    <section class="rooms-hero-section">
+        <div class="rooms-hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-badge-pill">
+                <i class="fa-solid fa-crown"></i> <span>Akomodasi Eksklusif</span>
+            </div>
+            <h1 class="hero-heading">Pilihan Kamar & <span class="text-highlight">Suite</span></h1>
+            <p class="hero-subtext">Nikmati perpaduan kesempurnaan kenyamanan modern dan estetika mewah untuk masa menginap tak terlupakan.</p>
+        </div>
+        <!-- Wave Curved Accent ala Desain Rotal Palace -->
+        <div class="hero-curve-bottom">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z" fill="#000000"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SECTION DAFTAR KAMAR -->
+    <section class="rooms-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">KOLEKSI AKOMODASI</span>
+                <h2>Temukan Ruang Istirahat Anda</h2>
+                <div class="line-yellow"></div>
+            </div>
+
+            <div class="rooms-grid">
+
+                <!-- KARTU KAMAR 1: Deluxe Room -->
+                <div class="room-card">
+                    <div class="room-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80" alt="Deluxe Room" class="room-img">
+                        <div class="room-badge">Populer</div>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header-meta">
+                            <h3 class="room-title">Deluxe Room</h3>
+                            <div class="room-rating">
+                                <i class="fa-solid fa-star yellow-text"></i> 4.9
+                            </div>
+                        </div>
+                        <p class="room-desc">Kamar berdesain kontemporer dengan pencahayaan hangat dan panorama pemandangan kota yang menawan.</p>
+                        
+                        <!-- Fasilitas Kamar -->
+                        <div class="room-amenities">
+                            <span title="Ukuran Ruangan"><i class="fa-solid fa-ruler-combined"></i> 35 m²</span>
+                            <span title="Kapasitas Kasur"><i class="fa-solid fa-bed"></i> King Bed</span>
+                            <span title="Wi-Fi Cepat"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                            <span title="Smart TV"><i class="fa-solid fa-tv"></i> Smart TV</span>
+                        </div>
+
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-amount">Rp 1.450.000</span>
+                                <span class="price-period">/ malam</span>
+                            </div>
+                            <a href="kontak.html" class="btn-yellow-solid">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KARTU KAMAR 2: Executive Suite -->
+                <div class="room-card featured-room">
+                    <div class="room-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Executive Suite" class="room-img">
+                        <div class="room-badge gold-badge">Pilihan Utama</div>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header-meta">
+                            <h3 class="room-title">Executive Suite</h3>
+                            <div class="room-rating">
+                                <i class="fa-solid fa-star yellow-text"></i> 5.0
+                            </div>
+                        </div>
+                        <p class="room-desc">Suite luas dengan area ruang tamu terpisah, pemandangan keindahan kota, dan layanan kamar eksklusif.</p>
+                        
+                        <!-- Fasilitas Kamar -->
+                        <div class="room-amenities">
+                            <span title="Ukuran Ruangan"><i class="fa-solid fa-ruler-combined"></i> 60 m²</span>
+                            <span title="Kapasitas Kasur"><i class="fa-solid fa-bed"></i> Super King</span>
+                            <span title="Bathtub"><i class="fa-solid fa-bath"></i> Bathtub</span>
+                            <span title="Sarapan Gratis"><i class="fa-solid fa-utensils"></i> Breakfast</span>
+                        </div>
+
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-amount">Rp 2.850.000</span>
+                                <span class="price-period">/ malam</span>
+                            </div>
+                            <a href="kontak.html" class="btn-yellow-solid">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KARTU KAMAR 3: Royal President Suite -->
+                <div class="room-card">
+                    <div class="room-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Royal President Suite" class="room-img">
+                        <div class="room-badge">Kemewahan Puncak</div>
+                    </div>
+                    <div class="room-content">
+                        <div class="room-header-meta">
+                            <h3 class="room-title">Royal President Suite</h3>
+                            <div class="room-rating">
+                                <i class="fa-solid fa-star yellow-text"></i> 5.0
+                            </div>
+                        </div>
+                        <p class="room-desc">Pengalaman menginap paling eksklusif dengan Jacuzzi privat, balkon pemandangan kota, dan akses lounge VIP.</p>
+                        
+                        <!-- Fasilitas Kamar -->
+                        <div class="room-amenities">
+                            <span title="Ukuran Ruangan"><i class="fa-solid fa-ruler-combined"></i> 110 m²</span>
+                            <span title="Kapasitas Kasur"><i class="fa-solid fa-bed"></i> King Bed</span>
+                            <span title="Private Jacuzzi"><i class="fa-solid fa-hot-tub-person"></i> Jacuzzi</span>
+                            <span title="Layanan Butler"><i class="fa-solid fa-user-tie"></i> Butler 24/7</span>
+                        </div>
+
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price-amount">Rp 5.200.000</span>
+                                <span class="price-period">/ malam</span>
+                            </div>
+                            <a href="kontak.html" class="btn-yellow-solid">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="brand-logo footer-logo">
+                    <img src="Crown.jpeg" alt="Logo LUX NOIR" class="logo-img">
+                    <div class="brand-text">
+                        <h2>LUX NOIR</h2>
+                        <p>HOTEL & RESORT</p>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Pilihan utama bagi Anda yang mengutamakan kemewahan, privasi, dan ketenangan di tengah pusat kota.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="fasilitas.html">Fasilitas</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hubungi Kami</h4>
+                <p><i class="fa-solid fa-location-dot yellow-text"></i> Jl. Jenderal Ambatron. 00, Jakarta</p>
+                <p><i class="fa-solid fa-phone yellow-text"></i> (021) 555-0192</p>
+                <p><i class="fa-solid fa-envelope yellow-text"></i> reservation@luxnoirhotel.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LUX NOIR Hotel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
