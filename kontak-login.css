@@ -3,10 +3,30 @@
    Mewarisi variabel dari home.css
    ========================================= */
 
-.nav-action {
+/* NAVBAR FULL WIDTH (LOGO POJOK KIRI, MENU TENGAH, TOMBOL POJOK KANAN) */
+.site-header .nav-container {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 36px;
+    padding-right: 36px;
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     align-items: center;
+}
+
+.brand-logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-action {
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .w-100 {
@@ -276,6 +296,10 @@
 }
 
 @media (max-width: 900px) {
+    .site-header .nav-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .contact-wrapper,
     .form-row {
         grid-template-columns: 1fr;
@@ -283,4 +307,17 @@
     .login-card {
         padding: 35px 25px;
     }
+
+}
+
+.login-crown,
+.logo-img {
+mix-blend-mode: lighten;
+}
+
+.login-crown {
+height: 54px;
+width: auto;
+margin: 0 auto 12px;
+display: block;
 }

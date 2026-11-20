@@ -42,7 +42,7 @@ ul {
     color: var(--yellow);
 }
 
-/* TOMBOL*/
+/* TOMBOL */
 .btn-yellow-solid, 
 .btn-yellow-outline {
     font-weight: 600;
@@ -79,7 +79,7 @@ ul {
     color: #000;
 }
 
-/*HEADER & NAVBAR*/
+/* HEADER & NAVBAR */
 .site-header {
     background: var(--bg-header);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -88,7 +88,10 @@ ul {
     z-index: 1000;
 }
 
-.nav-container {
+.site-header .nav-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 36px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,6 +102,19 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.site-header .brand-logo {
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.site-header .nav-action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
 }
 
 .logo-img {
@@ -207,7 +223,7 @@ ul {
     gap: 15px;
 }
 
-/*INFORMASI HOTEL (Layout Card & Grid) */
+/* INFORMASI HOTEL (Layout Card & Grid) */
 .info-section {
     padding: 90px 0 100px;
     background-color: var(--bg-black);
@@ -345,8 +361,11 @@ ul {
     color: var(--text-gray);
 }
 
-/*agar responsif di layar yang kecil*/
+/* agar responsif di layar yang kecil */
 @media (max-width: 900px) {
+    .site-header .nav-container {
+        padding: 0 20px;
+    }
     .nav-menu {
         display: none;
     }
