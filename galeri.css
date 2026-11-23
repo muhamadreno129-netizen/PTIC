@@ -1,0 +1,103 @@
+/* HALAMAN GALERI */
+.gallery-hero {
+    position: relative;
+    padding: 85px 0 65px;
+    background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    text-align: center;
+}
+
+.gallery-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.88));
+}
+
+.gallery-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.gallery-hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 46px;
+    margin-top: 8px;
+    line-height: 1.15;
+}
+
+.gallery-hero-content p {
+    color: var(--text-gray);
+    font-size: 15px;
+    margin-top: 16px;
+}
+
+.gallery-section {
+    padding: 70px 0 90px;
+    background-color: var(--bg-black);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #181818;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    aspect-ratio: 4 / 3;
+    transition: 0.3s ease;
+}
+
+.gallery-item:hover {
+    border-color: var(--yellow);
+    transform: translateY(-4px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 24px 20px 18px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0));
+}
+
+.gallery-caption span {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--yellow);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.gallery-caption h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    color: var(--text-white);
+}
+
+@media (max-width: 900px) {
+    .gallery-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
