@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasilitas & Layanan Eksklusif | The Lux Noir Hotel</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display (Mewah/Serif) & Plus Jakarta Sans (Modern/Clean) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- File CSS Eksternal -->
+    <link rel="stylesheet" href="fasilitas.css">
+
+    <!-- Konfigurasi Kustom Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            800: '#1A1A1A',
+                            900: '#0F0F0F',
+                            950: '#050505',
+                        },
+                        gold: {
+                            400: '#E5C158',
+                            500: '#D4AF37',
+                            600: '#B59021',
+                        },
+                        cream: '#FAF8F5'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-dark-950 text-slate-200 antialiased selection:bg-gold-500 selection:text-dark-950">
+
+    <!-- ==========================================
+         1. HEADER & NAVIGASI
+    =========================================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-dark-950/95 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Hotel -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 group-hover:bg-gold-500 group-hover:text-dark-950 transition-colors duration-300">
+                        <i class="fa-solid fa-crown text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white block leading-none">THE LUX NOIR</span>
+                        <span class="text-[10px] tracking-[0.25em] text-gold-400 uppercase block mt-1">Luxury Hotel & Resort</span>
+                    </div>
+                </a>
+
+                <!-- Menu Navigasi Desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#beranda" class="text-sm font-medium text-slate-200 hover:text-gold-400 transition-colors">Beranda</a>
+                    <a href="#fasilitas" class="text-sm font-medium text-gold-400 border-b-2 border-gold-500 pb-1">Fasilitas</a>
+                    <a href="#keunggulan" class="text-sm font-medium text-slate-200 hover:text-gold-400 transition-colors">Layanan VIP</a>
+                    <a href="#kontak" class="text-sm font-medium text-slate-200 hover:text-gold-400 transition-colors">Kontak</a>
+                </nav>
+
+                <!-- Tombol CTA Desktop & Mobile Menu Toggle -->
+                <div class="flex items-center space-x-4">
+                    <button onclick="openBookingToast()" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-gold-500 hover:bg-gold-400 text-dark-950 font-semibold text-sm transition-all duration-300 shadow-lg shadow-gold-500/20">
+                        <i class="fa-regular fa-calendar-check mr-2"></i> Reservasi Sekarang
+                    </button>
+                    
+                    <!-- Tombol Hamburger Mobile -->
+                    <button id="mobile-menu-btn" class="md:hidden text-white hover:text-gold-400 p-2 focus:outline-none" aria-label="Buka Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-t border-white/10 px-4 pt-2 pb-6 space-y-2">
+            <a href="#beranda" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-dark-800 hover:text-gold-400">Beranda</a>
+            <a href="#fasilitas" class="block px-3 py-2.5 rounded-lg text-base font-medium text-gold-400 bg-dark-800/70">Fasilitas</a>
+            <a href="#keunggulan" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-dark-800 hover:text-gold-400">Layanan VIP</a>
+            <a href="#kontak" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-dark-800 hover:text-gold-400">Kontak</a>
+            <div class="pt-2">
+                <button onclick="openBookingToast()" class="w-full py-3 rounded-full bg-gold-500 text-dark-950 font-semibold text-sm text-center">
+                    Reservasi Sekarang
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         2. HERO SECTION
+    =========================================== -->
+    <section id="beranda" class="relative pt-20 min-h-[82vh] flex items-center justify-center overflow-hidden bg-dark-950">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1920&q=80" 
+                 onerror="this.src='https://placehold.co/1920x1080/050505/D4AF37?text=The+Lux+Noir+Luxury+Facilities'"
+                 alt="Suasana Mewah The Lux Noir Hotel" 
+                 class="w-full h-full object-cover object-center opacity-45 scale-105 transition-transform duration-1000">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/70 to-dark-950/65"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-dark-800/80 backdrop-blur-md border border-gold-500/40 text-gold-400 text-xs sm:text-sm font-medium tracking-widest uppercase mb-6">
+                <i class="fa-solid fa-sparkles"></i>
+                <span>Standar Kemewahan Kelas Dunia</span>
+            </div>
+            
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+                Fasilitas Eksklusif untuk <span class="text-gold-400 italic">Kenyamanan Sempurna</span> Anda
+            </h1>
+            
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Nikmati pengalaman menginap tak terlupakan dengan rangkaian fasilitas premium mulai dari kolam renang infinity di puncak gedung, spa holistik, hingga sajian kuliner berbintang lima.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#fasilitas" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gold-500 hover:bg-gold-400 text-dark-950 font-semibold text-sm sm:text-base transition-all duration-300 shadow-xl shadow-gold-500/20 flex items-center justify-center">
+                    Jelajahi Fasilitas <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#kontak" class="w-full sm:w-auto px-8 py-4 rounded-full bg-dark-800/80 hover:bg-dark-800 backdrop-blur-sm border border-white/20 text-white font-medium text-sm sm:text-base transition-all duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-concierge-bell mr-2 text-gold-400"></i> Hubungi Concierge
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-dark-950 to-transparent z-10"></div>
+    </section>
+
+    <!-- ==========================================
+         3. DAFTAR & FILTER FASILITAS HOTEL
+    =========================================== -->
+    <section id="fasilitas" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-dark-950">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-gold-400 font-semibold tracking-widest uppercase text-xs sm:text-sm block mb-2">Akomodasi & Rekreasi</span>
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Fasilitas Utama Hotel</h2>
+            <div class="w-20 h-1 bg-gold-500 mx-auto rounded-full mb-6"></div>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Dirancang khusus untuk memenuhi kebutuhan relaksasi, kebugaran, kuliner, dan perjalanan bisnis Anda. Klik pada kartu fasilitas untuk melihat informasi selengkapnya.
+            </p>
+        </div>
+
+        <!-- Tombol Filter Kategori Interaktif -->
+        <div id="filter-container" class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+            <button data-filter="semua" class="filter-btn active px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-gold-500 text-dark-950 font-semibold shadow-md shadow-gold-500/20">
+                Semua Fasilitas
+            </button>
+            <button data-filter="relaksasi" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-dark-900 text-slate-300 hover:bg-dark-800 hover:text-gold-400 border border-white/10">
+                Relaksasi & Kebugaran
+            </button>
+            <button data-filter="kuliner" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-dark-900 text-slate-300 hover:bg-dark-800 hover:text-gold-400 border border-white/10">
+                Kuliner & Lounge
+            </button>
+            <button data-filter="bisnis" class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-dark-900 text-slate-300 hover:bg-dark-800 hover:text-gold-400 border border-white/10">
+                Bisnis & Layanan
+            </button>
+        </div>
+
+        <!-- Grid Kartu Fasilitas -->
+        <div id="facilities-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
+
+    <!-- ==========================================
+         4. BANNER KEUNGGULAN LAYANAN TAMU
+    =========================================== -->
+    <section id="keunggulan" class="bg-dark-900 py-16 px-4 sm:px-6 lg:px-8 border-y border-gold-500/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-6 rounded-2xl bg-dark-800/80 border border-white/10 hover:border-gold-500/40 transition-colors">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-semibold text-white mb-2">Keamanan 24 Jam</h3>
+                    <p class="text-slate-400 text-sm">Sistem pemantauan terpadu dan petugas keamanan profesional sepanjang waktu.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-800/80 border border-white/10 hover:border-gold-500/40 transition-colors">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-semibold text-white mb-2">Valet & Antar-Jemput</h3>
+                    <p class="text-slate-400 text-sm">Layanan parkir valet gratis serta penjemputan bandara dengan armada limusin mewah.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-800/80 border border-white/10 hover:border-gold-500/40 transition-colors">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-wheelchair"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-semibold text-white mb-2">Ramah Aksesibilitas</h3>
+                    <p class="text-slate-400 text-sm">Seluruh area hotel dilengkapi jalur akses dan lift khusus bagi tamu berkebutuhan khusus.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-800/80 border border-white/10 hover:border-gold-500/40 transition-colors">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-semibold text-white mb-2">Ramah Lingkungan</h3>
+                    <p class="text-slate-400 text-sm">Berkomitmen pada keberlanjutan dengan pengelolaan energi hijau dan bebas plastik sekali pakai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         5. FOOTER & KONTAK HOTEL
+    =========================================== -->
+    <footer id="kontak" class="bg-dark-950 text-slate-300 pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-9 h-9 rounded-full border border-gold-500 flex items-center justify-center text-gold-500">
+                            <i class="fa-solid fa-crown text-sm"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold tracking-wider text-white">THE LUX NOIR</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        Destinasi perhotelan bintang lima yang memadukan arsitektur klasik elegan dengan keramahtamahan khas Indonesia yang hangat.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-dark-800 hover:bg-gold-500 hover:text-dark-950 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-dark-800 hover:bg-gold-500 hover:text-dark-950 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full bg-dark-800 hover:bg-gold-500 hover:text-dark-950 flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-white text-lg font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#beranda" class="hover:text-gold-400 transition-colors">Beranda Utama</a></li>
+                        <li><a href="#fasilitas" class="hover:text-gold-400 transition-colors">Daftar Fasilitas</a></li>
+                        <li><a href="#keunggulan" class="hover:text-gold-400 transition-colors">Layanan VIP & Keamanan</a></li>
+                        <li><a href="#" onclick="openBookingToast(); return false;" class="hover:text-gold-400 transition-colors">Reservasi Kamar & Suite</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-white text-lg font-semibold mb-4">Informasi Kontak</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-gold-500 mt-1"></i>
+                            <span>Jl. Jenderal Sudirman Kav. 88, Kawasan Bisnis Terpadu, Jakarta 12190</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-gold-500"></i>
+                            <span>+62 (21) 5550-8899</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-brands fa-whatsapp text-gold-500"></i>
+                            <span>+62 812-8899-0011 (Concierge 24/7)</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-gold-500"></i>
+                            <span>concierge@luxnoir.co.id</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-white text-lg font-semibold mb-4">Waktu Operasional</h4>
+                    <div class="bg-dark-900 p-4 rounded-xl border border-white/10 text-sm space-y-2 mb-4">
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Check-In:</span>
+                            <span class="text-white font-medium">14:00 WIB</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Check-Out:</span>
+                            <span class="text-white font-medium">12:00 WIB</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Resepsionis:</span>
+                            <span class="text-gold-400 font-medium">24 Jam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 The Lux Noir Hotel & Resort. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-300">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-slate-300">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         6. MODAL INTERAKTIF DETAIL FASILITAS
+    =========================================== -->
+    <div id="facility-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true">
+        <div id="modal-backdrop" class="fixed inset-0 bg-dark-950/85 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="relative z-10 bg-dark-900 text-slate-200 rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-gold-500/30 animate-fade-in">
+            <button id="close-modal-btn" aria-label="Tutup Detail" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-dark-950/80 text-white hover:bg-gold-500 hover:text-dark-950 flex items-center justify-center transition-colors shadow-lg border border-white/10">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="relative h-60 sm:h-72 w-full bg-dark-950">
+                <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-6 right-6 flex items-end justify-between">
+                    <div>
+                        <span id="modal-category-badge" class="inline-block px-3 py-1 rounded-full bg-gold-500 text-dark-950 text-xs font-bold uppercase tracking-wider mb-2">
+                            Kategori
+                        </span>
+                        <h3 id="modal-title" class="font-serif text-2xl sm:text-3xl font-bold text-white">Judul Fasilitas</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 sm:p-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 p-4 rounded-2xl bg-dark-800/80 border border-white/10 text-sm">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-dark-950 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/20">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block">Jam Operasional</span>
+                            <span id="modal-hours" class="font-semibold text-white">06:00 - 22:00 WIB</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full bg-dark-950 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/20">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block">Lokasi di Hotel</span>
+                            <span id="modal-location" class="font-semibold text-white">Lantai 25 (Sky Deck)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p id="modal-desc" class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                    Deskripsi lengkap fasilitas akan tampil di sini.
+                </p>
+
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-gold-400 mb-3">Termasuk dalam Fasilitas Ini:</h4>
+                    <ul id="modal-features" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-slate-200"></ul>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-white/10">
+                    <button onclick="reserveFacility()" class="flex-1 py-3 px-6 rounded-full bg-gold-500 hover:bg-gold-400 text-dark-950 font-semibold text-sm transition-colors flex items-center justify-center">
+                        <i class="fa-solid fa-concierge-bell mr-2"></i> Pesan / Jadwalkan Akses
+                    </button>
+                    <button id="close-modal-footer-btn" class="py-3 px-6 rounded-full border border-white/20 hover:bg-dark-800 text-slate-200 font-medium text-sm transition-colors">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         7. TOAST NOTIFICATION
+    =========================================== -->
+    <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-dark-900 text-white px-5 py-4 rounded-2xl shadow-2xl border border-gold-500/50 flex items-center space-x-3 max-w-sm">
+            <div class="w-8 h-8 rounded-full bg-gold-500 text-dark-950 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div>
+                <h5 id="toast-title" class="font-semibold text-sm text-gold-400">Permintaan Diterima</h5>
+                <p id="toast-message" class="text-xs text-slate-300 mt-0.5">Tim Concierge kami akan segera menghubungi Anda.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         8. JAVASCRIPT UNTUK DATA, FILTER & MODAL
+    =========================================== -->
+    <script>
+        const facilitiesData = [
+            {
+                id: 1,
+                title: "Kolam Renang Infinity",
+                category: "relaksasi",
+                categoryLabel: "Relaksasi",
+                icon: "fa-solid fa-water-ladder",
+                hours: "06:00 – 22:00 WIB",
+                location: "Lantai 28 (Rooftop Sky Deck)",
+                shortDesc: "Berenang di tepi langit dengan panorama 360 derajat cakrawala kota yang memukau dan air hangat terkontrol.",
+                fullDesc: "Rasakan sensasi melayang di atas kota di Kolam Renang Infinity sepanjang 45 meter kami. Dilengkapi dengan pengaturan suhu air otomatis, kursi berjemur mewah di tepi kolam, serta layanan handuk dingin dan minuman penyegar.",
+                image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=80",
+                fallbackImg: "https://placehold.co/800x600/050505/D4AF37?text=Kolam+Renang+Infinity",
+                features: [
+                    "Pemandangan Panorama Kota 360°",
+                    "Suhu Air Hangat Terkontrol",
+                    "Cabana Pribadi & Kursi Berjemur",
+                    "Poolside Bar & Layanan Handuk"
+                ]
+            },
+            {
+                id: 2,
+                title: "Spa & Wellness Sanctuary",
+                category: "relaksasi",
+                categoryLabel: "Relaksasi",
+                icon: "fa-solid fa-spa",
+                hours: "09:00 – 23:00 WIB",
+                location: "Lantai 5 (Sayap Timur)",
+                shortDesc: "Pulihkan energi tubuh dan pikiran melalui pijat tradisional Nusantara, aromaterapi organik, dan sauna uap.",
+                fullDesc: "Aurelia Spa menghadirkan oase ketenangan di tengah hiruk-pikuk kota. Terapis bersertifikat kami memadukan teknik penyembuhan kuno dengan minyak esensial botani murni untuk memberikan relaksasi menyeluruh.",
+                image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80",
+                fallbackImg: "https://placehold.co/800x600/050505/D4AF37?text=Spa+dan+Wellness",
+                features: [
+                    "Ruang Perawatan Couple Suite",
+                    "Sauna Herbal & Jacuzzi Hangat",
+                    "Minyak Aromaterapi Organik",
+                    "Teh Rempah Relaksasi Gratis"
+                ]
+            },
+            {
+                id: 3,
+                title: "Restoran Bintang 5 'L’Or'",
+                category: "kuliner",
+                categoryLabel: "Kuliner",
+                icon: "fa-solid fa-utensils",
+                hours: "06:30 – 23:30 WIB",
+                location: "Lantai 27 (Panorama Dining)",
+                shortDesc: "Sajian gastronomi kelas dunia perpaduan cita rasa kontinental dan warisan kuliner Nusantara oleh Chef Eksekutif.",
+                fullDesc: "Nikmati pengalaman bersantap mewah di Restoran L'Or. Setiap hidangan diracik menggunakan bahan-bahan musiman terbaik, didampingi koleksi anggur pilihan dari berbagai belahan dunia dalam suasana interior bernuansa emas.",
+                image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
+                fallbackImg: "https://placehold.co/800x600/050505/D4AF37?text=Restoran+Bintang+5",
+                features: [
+                    "Sarapan Prasmanan Internasional",
+                    "Menu Fine Dining & Tasting Course",
+                    "Ruang Makan VIP Privat",
+                    "Pilihan Menu Sehat & Vegetarian"
+                ]
+            },
+            {
+                id: 4,
+                title: "Pusat Kebugaran 24 Jam",
+                category: "relaksasi",
+                categoryLabel: "Kebugaran",
+                icon: "fa-solid fa-dumbbell",
+                hours: "Buka 24 Jam",
+                location: "Lantai 5 (Sayap Barat)",
+                shortDesc: "Dilengkapi peralatan kardio dan angkat beban berteknologi mutakhir dengan dukungan pelatih pribadi profesional.",
+                fullDesc: "Jaga rutinitas kebugaran Anda kapan saja. Pusat kebugaran kami menyediakan mesin latihan generasi terbaru dari Technogym, studio yoga, serta fasilitas ruang ganti mewah lengkap dengan loker pintar.",
+                image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80",
+                fallbackImg: "https://placehold.co/800x600/050505/D4AF37?text=Pusat+Kebugaran+24+Jam",
+                features: [
+                    "Akses Kartu Kamar 24 Jam Penuh",
+                    "Peralatan Kardio & Beban Modern",
+                    "Sesi Personal Trainer (Berdasarkan Permintaan)",
+                    "Air Mineral & Handuk Segar Tanpa Batas"
+                ]
+            },
+            {
+                id: 5,
+                title: "Grand Ballroom & Ruang Rapat",
+                category: "bisnis",
+                categoryLabel: "Bisnis & Acara",
+                icon: "fa-solid fa-champagne-glasses",
+                hours: "07:00 – 24:00 WIB",
+                location: "Lantai 2 & Lantai 3",
+                shortDesc: "Ruang perhelatan megah tanpa pilar berkapasitas hingga 1.200 tamu untuk konferensi internasional dan pernikahan.",
+                fullDesc: "Aurelia Grand Ballroom memadukan langit-langit tinggi dengan lampu gantung kristal yang memukau serta sistem tata suara dan layar LED beresolusi tinggi, didukung tim perencana acara berdedikasi.",
+                image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80",
+                fallbackImg: "https://placehold.co/800x600/050505/D4AF37?text=Grand+Ballroom",
+                features: [
+                    "Kapasitas Hingga 1.200 Tamu",
+                    "Videotron LED & Audio Kelas Konser",
+                    "8 Ruang Rapat Eksekutif Privat",
+                    "Tim Event & Katering Khusus"
+                ]
+            },
+            {
+                id: 6,
+                title: "Concierge & Wi-Fi Fiber 24 Jam",
+                category: "bisnis",
+                categoryLabel: "Layanan VIP",
+                icon: "fa-solid fa-wifi",
+                hours: "Buka 24 Jam",
+                location: "Seluruh Area Hotel & Lobi Utama",
+                shortDesc: "Koneksi internet berkecepatan tinggi gratis di seluruh penjuru hotel serta layanan pramutamu siaga penuh.",
+                fullDesc: "Tetap terhubung dan nikmati kemudahan tanpa batas. Nikmati akses Wi-Fi fiber optik berkecepatan tinggi secara gratis serta layanan Concierge 24 jam untuk reservasi restoran, tiket, hingga kebutuhan perjalanan mendadak.",
+                image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
+                fallbackImg: "https://placehold.co/800x600/050505/D4AF37?text=Concierge+dan+WiFi",
+                features: [
+                    "Internet Fiber Optik Kecepatan Tinggi",
+                    "Layanan Pramutamu & Asisten Pribadi",
+                    "Penitipan Bagasi & Layanan Setrika",
+                    "Bantuan Tiket & Perjalanan Kota"
+                ]
+            }
+        ];
+
+        const gridEl = document.getElementById('facilities-grid');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const modalEl = document.getElementById('facility-modal');
+        const modalBackdrop = document.getElementById('modal-backdrop');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const closeModalFooterBtn = document.getElementById('close-modal-footer-btn');
+        let activeFacilityTitle = "";
+
+        function renderFacilities(filter = 'semua') {
+            gridEl.innerHTML = '';
+            const filtered = filter === 'semua'
+                ? facilitiesData
+                : facilitiesData.filter(item => item.category === filter);
+
+            filtered.forEach((item, index) => {
+                const card = document.createElement('article');
+                card.className = "animate-fade-in group bg-dark-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/10 hover:border-gold-500/50 flex flex-col";
+                card.style.animationDelay = `${index * 60}ms`;
+
+                card.innerHTML = `
+                    <div class="relative h-56 overflow-hidden bg-dark-950 cursor-pointer" onclick="openFacilityModal(${item.id})">
+                        <img src="${item.image}"
+                             onerror="this.src='${item.fallbackImg}'"
+                             alt="${item.title}"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-dark-950/90 backdrop-blur-sm text-gold-400 text-xs font-semibold border border-gold-500/30">
+                            <i class="${item.icon} mr-1.5"></i>${item.categoryLabel}
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-gold-400 transition-colors mb-2 cursor-pointer" onclick="openFacilityModal(${item.id})">
+                            ${item.title}
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5 flex-1">
+                            ${item.shortDesc}
+                        </p>
+
+                        <div class="space-y-2 py-3 px-4 rounded-xl bg-dark-800/80 border border-white/10 text-xs text-slate-300 mb-5">
+                            <div class="flex items-center">
+                                <i class="fa-regular fa-clock text-gold-400 w-5"></i>
+                                <span>${item.hours}</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-location-dot text-gold-400 w-5"></i>
+                                <span>${item.location}</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openFacilityModal(${item.id})" class="w-full py-3 px-4 rounded-xl bg-gold-500 hover:bg-gold-400 text-dark-950 font-semibold text-sm transition-all duration-300 flex items-center justify-center">
+                            Lihat Detail <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                `;
+
+                gridEl.appendChild(card);
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-gold-500', 'text-dark-950', 'font-semibold', 'shadow-md', 'shadow-gold-500/20');
+                    b.classList.add('bg-dark-900', 'text-slate-300', 'hover:bg-dark-800', 'hover:text-gold-400', 'border', 'border-white/10');
+                });
+
+                btn.classList.remove('bg-dark-900', 'text-slate-300', 'hover:bg-dark-800', 'hover:text-gold-400', 'border', 'border-white/10');
+                btn.classList.add('active', 'bg-gold-500', 'text-dark-950', 'font-semibold', 'shadow-md', 'shadow-gold-500/20');
+
+                const selectedFilter = btn.getAttribute('data-filter');
+                renderFacilities(selectedFilter);
+            });
+        });
+
+        function openFacilityModal(id) {
+            const item = facilitiesData.find(f => f.id === id);
+            if (!item) return;
+
+            activeFacilityTitle = item.title;
+            const modalImg = document.getElementById('modal-img');
+            modalImg.src = item.image;
+            modalImg.onerror = function () { this.src = item.fallbackImg; };
+            modalImg.alt = item.title;
+
+            document.getElementById('modal-category-badge').textContent = item.categoryLabel;
+            document.getElementById('modal-title').textContent = item.title;
+            document.getElementById('modal-hours').textContent = item.hours;
+            document.getElementById('modal-location').textContent = item.location;
+            document.getElementById('modal-desc').textContent = item.fullDesc;
+
+            const featuresList = document.getElementById('modal-features');
+            featuresList.innerHTML = '';
+            item.features.forEach(feat => {
+                const li = document.createElement('li');
+                li.className = "flex items-center space-x-2";
+                li.innerHTML = `<i class="fa-solid fa-circle-check text-gold-400 text-xs shrink-0"></i><span>${feat}</span>`;
+                featuresList.appendChild(li);
+            });
+
+            modalEl.classList.remove('hidden');
+            modalEl.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFacilityModal() {
+            modalEl.classList.add('hidden');
+            modalEl.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        closeModalBtn.addEventListener('click', closeFacilityModal);
+        closeModalFooterBtn.addEventListener('click', closeFacilityModal);
+        modalBackdrop.addEventListener('click', closeFacilityModal);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) {
+                closeFacilityModal();
+            }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        let toastTimeout;
+        function showToast(title, message) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-title').textContent = title;
+            document.getElementById('toast-message').textContent = message;
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3800);
+        }
+
+        function openBookingToast() {
+            showToast(
+                "Reservasi The Lux Noir",
+                "Layanan reservasi kamar & fasilitas telah dialihkan ke tim Concierge kami."
+            );
+        }
+
+        function reserveFacility() {
+            const facilityName = activeFacilityTitle || "fasilitas";
+            closeFacilityModal();
+            showToast(
+                `Permintaan: ${facilityName}`,
+                "Jadwal & ketersediaan fasilitas sedang dicek oleh staf kami."
+            );
+        }
+
+        renderFacilities('semua');
+    </script>
+</body>
+</html>
