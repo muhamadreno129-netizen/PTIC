@@ -32,7 +32,7 @@
             </ul>
 
             <div class="nav-action">
-                <a href="login.html" id="logoutBtn" class="btn-nav-logout">Logout</a>
+                <a href="login.html" class="btn-nav-logout">Logout</a>
                 <a href="kontak.html" class="btn-yellow-solid">Pesan Kamar</a>
             </div>
         </div>
@@ -53,27 +53,285 @@
         </div>
     </section>
 
-    <!-- DAFTAR & FILTER FASILITAS -->
+ <!-- DAFTAR FASILITAS -->
     <section id="daftar-fasilitas" class="facility-main">
         <div class="container">
             <div class="section-header">
                 <span class="sub-title">AKOMODASI & REKREASI</span>
                 <h2>Fasilitas Utama Hotel</h2>
                 <div class="line-yellow"></div>
-                <p class="section-desc">Klik pada kartu fasilitas untuk melihat jam operasional, lokasi, dan detail layanan.</p>
+                <p class="section-desc">Klik kartu fasilitas untuk melihat detail jam operasional, lokasi, dan layanan.</p>
             </div>
 
-            <div id="filter-container" class="facility-filters">
-                <button type="button" data-filter="semua" class="filter-btn active">Semua Fasilitas</button>
-                <button type="button" data-filter="relaksasi" class="filter-btn">Relaksasi & Kebugaran</button>
-                <button type="button" data-filter="kuliner" class="filter-btn">Kuliner & Lounge</button>
-                <button type="button" data-filter="bisnis" class="filter-btn">Bisnis & Layanan</button>
-            </div>
+            <div class="facility-cards-grid">
+                <!-- 1 -->
+                <a href="#detail-kolam" class="facility-card">
+                    <div class="facility-card-media">
+                        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=80" alt="Kolam Renang Infinity">
+                        <span class="facility-badge">Relaksasi</span>
+                        <div class="facility-card-icon"><i class="fa-solid fa-water-ladder"></i></div>
+                    </div>
+                    <div class="facility-card-body">
+                        <div>
+                            <h3>Kolam Renang Infinity</h3>
+                            <p>Berenang di tepi langit dengan panorama cakrawala kota dan air hangat terkontrol.</p>
+                        </div>
+                        <div class="facility-card-footer">
+                            <span><i class="fa-regular fa-clock yellow-text"></i> 06:00 – 22:00 WIB</span>
+                            <span class="facility-detail-link">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
 
-            <div id="facilities-grid" class="facility-cards-grid"></div>
+                <!-- 2 -->
+                <a href="#detail-spa" class="facility-card">
+                    <div class="facility-card-media">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80" alt="Spa & Wellness Sanctuary">
+                        <span class="facility-badge">Relaksasi</span>
+                        <div class="facility-card-icon"><i class="fa-solid fa-spa"></i></div>
+                    </div>
+                    <div class="facility-card-body">
+                        <div>
+                            <h3>Spa & Wellness Sanctuary</h3>
+                            <p>Pulihkan energi tubuh dan pikiran melalui pijat relaksasi, aromaterapi, dan sauna privat.</p>
+                        </div>
+                        <div class="facility-card-footer">
+                            <span><i class="fa-regular fa-clock yellow-text"></i> 09:00 – 23:00 WIB</span>
+                            <span class="facility-detail-link">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 3 -->
+                <a href="#detail-restoran" class="facility-card">
+                    <div class="facility-card-media">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Restoran Bintang 5 L'Or">
+                        <span class="facility-badge">Kuliner</span>
+                        <div class="facility-card-icon"><i class="fa-solid fa-utensils"></i></div>
+                    </div>
+                    <div class="facility-card-body">
+                        <div>
+                            <h3>Restoran Bintang 5 'L’Or'</h3>
+                            <p>Sajian kuliner lokal dan internasional yang diracik langsung oleh tim chef berpengalaman.</p>
+                        </div>
+                        <div class="facility-card-footer">
+                            <span><i class="fa-regular fa-clock yellow-text"></i> 06:30 – 23:30 WIB</span>
+                            <span class="facility-detail-link">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 4 -->
+                <a href="#detail-gym" class="facility-card">
+                    <div class="facility-card-media">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80" alt="Pusat Kebugaran 24 Jam">
+                        <span class="facility-badge">Kebugaran</span>
+                        <div class="facility-card-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                    </div>
+                    <div class="facility-card-body">
+                        <div>
+                            <h3>Pusat Kebugaran 24 Jam</h3>
+                            <p>Dilengkapi peralatan kardio dan angkat beban modern untuk menjaga kebugaran kapan saja.</p>
+                        </div>
+                        <div class="facility-card-meta-space"></div>
+                        <div class="facility-card-footer">
+                            <span><i class="fa-regular fa-clock yellow-text"></i> Buka 24 Jam</span>
+                            <span class="facility-detail-link">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 5 -->
+                <a href="#detail-ballroom" class="facility-card">
+                    <div class="facility-card-media">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80" alt="Grand Ballroom & Ruang Rapat">
+                        <span class="facility-badge">Bisnis & Acara</span>
+                        <div class="facility-card-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+                    </div>
+                    <div class="facility-card-body">
+                        <div>
+                            <h3>Grand Ballroom & Ruang Rapat</h3>
+                            <p>Ruang pertemuan dan perhelatan fleksibel dengan dukungan tata suara dan layar presentasi.</p>
+                        </div>
+                        <div class="facility-card-footer">
+                            <span><i class="fa-regular fa-clock yellow-text"></i> 07:00 – 24:00 WIB</span>
+                            <span class="facility-detail-link">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 6 -->
+                <a href="#detail-concierge" class="facility-card">
+                    <div class="facility-card-media">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Concierge & Wi-Fi 24 Jam">
+                        <span class="facility-badge">Layanan VIP</span>
+                        <div class="facility-card-icon"><i class="fa-solid fa-wifi"></i></div>
+                    </div>
+                    <div class="facility-card-body">
+                        <div>
+                            <h3>Concierge & Wi-Fi 24 Jam</h3>
+                            <p>Koneksi internet cepat di seluruh area hotel serta layanan bantuan tamu siaga 24 jam.</p>
+                        </div>
+                        <div class="facility-card-footer">
+                            <span><i class="fa-regular fa-clock yellow-text"></i> Buka 24 Jam</span>
+                            <span class="facility-detail-link">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- DETAIL 1 -->
+        <div id="detail-kolam" class="css-modal">
+            <a href="#daftar-fasilitas" class="css-modal-bg" aria-label="Tutup detail"></a>
+            <div class="css-modal-box">
+                <a href="#daftar-fasilitas" class="css-modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></a>
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=80" alt="Kolam Renang Infinity" class="css-modal-img">
+                <div class="css-modal-content">
+                    <span class="facility-inline-badge">Relaksasi</span>
+                    <h3>Kolam Renang Infinity</h3>
+                    <p class="css-modal-meta"><i class="fa-regular fa-clock yellow-text"></i> 06:00 – 22:00 WIB &nbsp;•&nbsp; <i class="fa-solid fa-location-dot yellow-text"></i> Lantai 28 (Rooftop Sky Deck)</p>
+                    <p class="css-modal-desc">Rasakan sensasi bersantai di atas kota dengan panorama cakrawala, suhu air hangat terkontrol, kursi berjemur, serta layanan handuk dan minuman segar.</p>
+                    <ul class="css-modal-list">
+                        <li><i class="fa-solid fa-check yellow-text"></i> Pemandangan Panorama Kota</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Suhu Air Hangat Terkontrol</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Kursi Berjemur & Area Santai</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Layanan Handuk & Minuman</li>
+                    </ul>
+                    <div class="css-modal-actions">
+                        <a href="kontak.html" class="btn-yellow-solid">Pesan / Hubungi</a>
+                        <a href="#daftar-fasilitas" class="btn-yellow-outline">Tutup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DETAIL 2 -->
+        <div id="detail-spa" class="css-modal">
+            <a href="#daftar-fasilitas" class="css-modal-bg" aria-label="Tutup detail"></a>
+            <div class="css-modal-box">
+                <a href="#daftar-fasilitas" class="css-modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></a>
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80" alt="Spa & Wellness Sanctuary" class="css-modal-img">
+                <div class="css-modal-content">
+                    <span class="facility-inline-badge">Relaksasi</span>
+                    <h3>Spa & Wellness Sanctuary</h3>
+                    <p class="css-modal-meta"><i class="fa-regular fa-clock yellow-text"></i> 09:00 – 23:00 WIB &nbsp;•&nbsp; <i class="fa-solid fa-location-dot yellow-text"></i> Lantai 5 (Wellness Wing)</p>
+                    <p class="css-modal-desc">Pulihkan energi tubuh dan pikiran melalui pijat relaksasi, aromaterapi pilihan, dan ruang sauna privat bersama terapis berpengalaman.</p>
+                    <ul class="css-modal-list">
+                        <li><i class="fa-solid fa-check yellow-text"></i> Ruang Perawatan Privat</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Sauna & Area Relaksasi</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Minyak Aromaterapi Pilihan</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Teh Hangat Setelah Perawatan</li>
+                    </ul>
+                    <div class="css-modal-actions">
+                        <a href="kontak.html" class="btn-yellow-solid">Pesan / Hubungi</a>
+                        <a href="#daftar-fasilitas" class="btn-yellow-outline">Tutup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DETAIL 3 -->
+        <div id="detail-restoran" class="css-modal">
+            <a href="#daftar-fasilitas" class="css-modal-bg" aria-label="Tutup detail"></a>
+            <div class="css-modal-box">
+                <a href="#daftar-fasilitas" class="css-modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></a>
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Restoran Bintang 5 L'Or" class="css-modal-img">
+                <div class="css-modal-content">
+                    <span class="facility-inline-badge">Kuliner</span>
+                    <h3>Restoran Bintang 5 'L’Or'</h3>
+                    <p class="css-modal-meta"><i class="fa-regular fa-clock yellow-text"></i> 06:30 – 23:30 WIB &nbsp;•&nbsp; <i class="fa-solid fa-location-dot yellow-text"></i> Lantai Mezzanine</p>
+                    <p class="css-modal-desc">Nikmati sajian kuliner lokal dan internasional yang diracik langsung oleh tim chef berpengalaman untuk sarapan, makan siang, hingga makan malam.</p>
+                    <ul class="css-modal-list">
+                        <li><i class="fa-solid fa-check yellow-text"></i> Sarapan & Hidangan Internasional</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Menu Makan Malam Eksklusif</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Area Makan Privat</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Pilihan Menu Sehat</li>
+                    </ul>
+                    <div class="css-modal-actions">
+                        <a href="kontak.html" class="btn-yellow-solid">Pesan / Hubungi</a>
+                        <a href="#daftar-fasilitas" class="btn-yellow-outline">Tutup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DETAIL 4 -->
+        <div id="detail-gym" class="css-modal">
+            <a href="#daftar-fasilitas" class="css-modal-bg" aria-label="Tutup detail"></a>
+            <div class="css-modal-box">
+                <a href="#daftar-fasilitas" class="css-modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></a>
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80" alt="Pusat Kebugaran 24 Jam" class="css-modal-img">
+                <div class="css-modal-content">
+                    <span class="facility-inline-badge">Kebugaran</span>
+                    <h3>Pusat Kebugaran 24 Jam</h3>
+                    <p class="css-modal-meta"><i class="fa-regular fa-clock yellow-text"></i> Buka 24 Jam &nbsp;•&nbsp; <i class="fa-solid fa-location-dot yellow-text"></i> Lantai 5 (Wellness Wing)</p>
+                    <p class="css-modal-desc">Jaga kebugaran kapan saja dengan peralatan kardio dan angkat beban modern, ruang ganti, loker, serta air mineral dan handuk.</p>
+                    <ul class="css-modal-list">
+                        <li><i class="fa-solid fa-check yellow-text"></i> Akses 24 Jam untuk Tamu</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Peralatan Kardio & Beban</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Ruang Ganti & Loker</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Air Mineral & Handuk</li>
+                    </ul>
+                    <div class="css-modal-actions">
+                        <a href="kontak.html" class="btn-yellow-solid">Pesan / Hubungi</a>
+                        <a href="#daftar-fasilitas" class="btn-yellow-outline">Tutup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DETAIL 5 -->
+        <div id="detail-ballroom" class="css-modal">
+            <a href="#daftar-fasilitas" class="css-modal-bg" aria-label="Tutup detail"></a>
+            <div class="css-modal-box">
+                <a href="#daftar-fasilitas" class="css-modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></a>
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80" alt="Grand Ballroom & Ruang Rapat" class="css-modal-img">
+                <div class="css-modal-content">
+                    <span class="facility-inline-badge">Bisnis & Acara</span>
+                    <h3>Grand Ballroom & Ruang Rapat</h3>
+                    <p class="css-modal-meta"><i class="fa-regular fa-clock yellow-text"></i> 07:00 – 24:00 WIB &nbsp;•&nbsp; <i class="fa-solid fa-location-dot yellow-text"></i> Lantai 2 & Lantai 3</p>
+                    <p class="css-modal-desc">Ruang pertemuan dan perhelatan fleksibel untuk rapat, seminar, maupun acara privat lengkap dengan tata suara, layar presentasi, dan katering.</p>
+                    <ul class="css-modal-list">
+                        <li><i class="fa-solid fa-check yellow-text"></i> Ruang Rapat & Ballroom Fleksibel</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Audio & Proyektor / Layar</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Layanan Katering Acara</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Pendampingan Tim Event</li>
+                    </ul>
+                    <div class="css-modal-actions">
+                        <a href="kontak.html" class="btn-yellow-solid">Pesan / Hubungi</a>
+                        <a href="#daftar-fasilitas" class="btn-yellow-outline">Tutup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DETAIL 6 -->
+        <div id="detail-concierge" class="css-modal">
+            <a href="#daftar-fasilitas" class="css-modal-bg" aria-label="Tutup detail"></a>
+            <div class="css-modal-box">
+                <a href="#daftar-fasilitas" class="css-modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></a>
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80" alt="Concierge & Wi-Fi 24 Jam" class="css-modal-img">
+                <div class="css-modal-content">
+                    <span class="facility-inline-badge">Layanan VIP</span>
+                    <h3>Concierge & Wi-Fi 24 Jam</h3>
+                    <p class="css-modal-meta"><i class="fa-regular fa-clock yellow-text"></i> Buka 24 Jam &nbsp;•&nbsp; <i class="fa-solid fa-location-dot yellow-text"></i> Seluruh Area & Lobi</p>
+                    <p class="css-modal-desc">Nikmati koneksi Wi-Fi cepat di seluruh area hotel serta layanan bantuan tamu 24 jam untuk kebutuhan informasi, penitipan barang, dan reservasi.</p>
+                    <ul class="css-modal-list">
+                        <li><i class="fa-solid fa-check yellow-text"></i> Wi-Fi Kecepatan Tinggi</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Layanan Bantuan Tamu 24 Jam</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Penitipan Barang Sementara</li>
+                        <li><i class="fa-solid fa-check yellow-text"></i> Informasi & Reservasi Layanan</li>
+                    </ul>
+                    <div class="css-modal-actions">
+                        <a href="kontak.html" class="btn-yellow-solid">Pesan / Hubungi</a>
+                        <a href="#daftar-fasilitas" class="btn-yellow-outline">Tutup</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
+    
     <!-- KEUNGGULAN LAYANAN TAMU -->
     <section class="facility-perks">
         <div class="container">
@@ -150,310 +408,5 @@
         </div>
     </footer>
 
-    <!-- MODAL DETAIL FASILITAS -->
-    <div id="facility-modal" class="facility-modal" role="dialog" aria-modal="true" aria-hidden="true">
-        <div id="modal-backdrop" class="facility-modal-backdrop"></div>
-        <div class="facility-modal-box">
-            <button type="button" id="close-modal-btn" class="facility-modal-close" aria-label="Tutup Detail">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div class="facility-modal-media">
-                <img id="modal-img" src="" alt="">
-                <div class="facility-modal-media-overlay">
-                    <span id="modal-category-badge" class="facility-badge">Kategori</span>
-                    <h3 id="modal-title">Judul Fasilitas</h3>
-                </div>
-            </div>
-
-            <div class="facility-modal-body">
-                <div class="facility-modal-info">
-                    <div class="modal-info-item">
-                        <i class="fa-regular fa-clock yellow-text"></i>
-                        <div>
-                            <small>Jam Operasional</small>
-                            <strong id="modal-hours">06:00 - 22:00 WIB</strong>
-                        </div>
-                    </div>
-                    <div class="modal-info-item">
-                        <i class="fa-solid fa-location-dot yellow-text"></i>
-                        <div>
-                            <small>Lokasi di Hotel</small>
-                            <strong id="modal-location">Lantai 28</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <p id="modal-desc" class="facility-modal-desc"></p>
-
-                <div class="facility-modal-features-wrap">
-                    <h4>Termasuk dalam Fasilitas Ini:</h4>
-                    <ul id="modal-features" class="facility-modal-features"></ul>
-                </div>
-
-                <div class="facility-modal-actions">
-                    <button type="button" onclick="reserveFacility()" class="btn-yellow-solid">
-                        <i class="fa-solid fa-concierge-bell"></i> Pesan / Jadwalkan Akses
-                    </button>
-                    <button type="button" id="close-modal-footer-btn" class="btn-yellow-outline">Tutup</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- TOAST NOTIFIKASI -->
-    <div id="toast-notification" class="facility-toast">
-        <div class="facility-toast-icon"><i class="fa-solid fa-check"></i></div>
-        <div>
-            <h5 id="toast-title">Permintaan Diterima</h5>
-            <p id="toast-message">Tim Concierge kami akan segera menghubungi Anda.</p>
-        </div>
-    </div>
-
-    <script>
-        const facilitiesData = [
-            {
-                id: 1,
-                title: "Kolam Renang Infinity",
-                category: "relaksasi",
-                categoryLabel: "Relaksasi",
-                icon: "fa-solid fa-water-ladder",
-                hours: "06:00 – 22:00 WIB",
-                location: "Lantai 28 (Rooftop Sky Deck)",
-                shortDesc: "Berenang di tepi langit dengan panorama cakrawala kota yang memukau dan air hangat terkontrol.",
-                fullDesc: "Rasakan sensasi bersantai di atas kota di Kolam Renang Infinity kami. Dilengkapi pengaturan suhu air nyaman, kursi berjemur di tepi kolam, serta layanan handuk dan minuman segar.",
-                image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=80",
-                fallbackImg: "https://placehold.co/800x600/181818/d4af37?text=Kolam+Renang+Infinity",
-                features: [
-                    "Pemandangan Panorama Kota",
-                    "Suhu Air Hangat Terkontrol",
-                    "Kursi Berjemur & Area Santai",
-                    "Layanan Handuk & Minuman"
-                ]
-            },
-            {
-                id: 2,
-                title: "Spa & Wellness Sanctuary",
-                category: "relaksasi",
-                categoryLabel: "Relaksasi",
-                icon: "fa-solid fa-spa",
-                hours: "09:00 – 23:00 WIB",
-                location: "Lantai 5 (Wellness Wing)",
-                shortDesc: "Pulihkan energi tubuh dan pikiran melalui pijat relaksasi, aromaterapi, dan sauna privat.",
-                fullDesc: "Spa LUX NOIR menghadirkan suasana tenang untuk memulihkan tubuh setelah beraktivitas dengan terapis berpengalaman dan aromaterapi pilihan.",
-                image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80",
-                fallbackImg: "https://placehold.co/800x600/181818/d4af37?text=Spa+dan+Wellness",
-                features: [
-                    "Ruang Perawatan Privat",
-                    "Sauna & Area Relaksasi",
-                    "Minyak Aromaterapi Pilihan",
-                    "Teh Hangat Setelah Perawatan"
-                ]
-            },
-            {
-                id: 3,
-                title: "Restoran Bintang 5 'L’Or'",
-                category: "kuliner",
-                categoryLabel: "Kuliner",
-                icon: "fa-solid fa-utensils",
-                hours: "06:30 – 23:30 WIB",
-                location: "Lantai Mezzanine",
-                shortDesc: "Sajian kuliner lokal dan internasional yang diracik langsung oleh tim chef berpengalaman kami.",
-                fullDesc: "Nikmati pengalaman bersantap eksklusif di Restoran L'Or dengan pilihan menu sarapan, makan siang, hingga fine dining malam dalam suasana elegan.",
-                image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
-                fallbackImg: "https://placehold.co/800x600/181818/d4af37?text=Restoran+Bintang+5",
-                features: [
-                    "Sarapan & Hidangan Internasional",
-                    "Menu Makan Malam Eksklusif",
-                    "Area Makan Privat",
-                    "Pilihan Menu Sehat"
-                ]
-            },
-            {
-                id: 4,
-                title: "Pusat Kebugaran 24 Jam",
-                category: "relaksasi",
-                categoryLabel: "Kebugaran",
-                icon: "fa-solid fa-dumbbell",
-                hours: "Buka 24 Jam",
-                location: "Lantai 5 (Wellness Wing)",
-                shortDesc: "Dilengkapi peralatan kardio dan angkat beban modern untuk menjaga kebugaran kapan saja.",
-                fullDesc: "Akses pusat kebugaran kapan pun dengan peralatan latihan kardio dan beban yang terawat, serta ruang ganti yang nyaman.",
-                image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80",
-                fallbackImg: "https://placehold.co/800x600/181818/d4af37?text=Pusat+Kebugaran",
-                features: [
-                    "Akses 24 Jam untuk Tamu",
-                    "Peralatan Kardio & Beban",
-                    "Ruang Ganti & Loker",
-                    "Air Mineral & Handuk"
-                ]
-            },
-            {
-                id: 5,
-                title: "Grand Ballroom & Ruang Rapat",
-                category: "bisnis",
-                categoryLabel: "Bisnis & Acara",
-                icon: "fa-solid fa-champagne-glasses",
-                hours: "07:00 – 24:00 WIB",
-                location: "Lantai 2 & Lantai 3",
-                shortDesc: "Ruang pertemuan dan perhelatan modern dengan dukungan tata suara dan layar presentasi.",
-                fullDesc: "Cocok untuk rapat perusahaan, seminar, maupun acara privat dengan penataan ruangan yang fleksibel dan dukungan tim acara.",
-                image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=80",
-                fallbackImg: "https://placehold.co/800x600/181818/d4af37?text=Grand+Ballroom",
-                features: [
-                    "Ruang Rapat & Ballroom Fleksibel",
-                    "Audio & Proyektor / Layar",
-                    "Layanan Katering Acara",
-                    "Pendampingan Tim Event"
-                ]
-            },
-            {
-                id: 6,
-                title: "Concierge & Wi-Fi 24 Jam",
-                category: "bisnis",
-                categoryLabel: "Layanan VIP",
-                icon: "fa-solid fa-wifi",
-                hours: "Buka 24 Jam",
-                location: "Seluruh Area Hotel & Lobi",
-                shortDesc: "Koneksi internet cepat di seluruh area hotel serta layanan bantuan tamu siaga 24 jam.",
-                fullDesc: "Nikmati koneksi Wi-Fi stabil di kamar dan area umum serta layanan concierge untuk membantu kebutuhan informasi dan reservasi selama menginap.",
-                image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
-                fallbackImg: "https://placehold.co/800x600/181818/d4af37?text=Concierge+dan+WiFi",
-                features: [
-                    "Wi-Fi Kecepatan Tinggi",
-                    "Layanan Bantuan Tamu 24 Jam",
-                    "Penitipan Barang Sementara",
-                    "Informasi & Reservasi Layanan"
-                ]
-            }
-        ];
-
-        const facilitiesGrid = document.getElementById('facilities-grid');
-        const filterButtons = document.querySelectorAll('.filter-btn');
-
-        function renderFacilities(filter = 'semua') {
-            if (!facilitiesGrid) return;
-
-            const filtered = filter === 'semua'
-                ? facilitiesData
-                : facilitiesData.filter((item) => item.category === filter);
-
-            facilitiesGrid.innerHTML = filtered.map((item) => `
-                <article onclick="openFacilityModal(${item.id})" class="facility-card">
-                    <div class="facility-card-media">
-                        <img src="${item.image}"
-                             onerror="this.onerror=null; this.src='${item.fallbackImg}';"
-                             alt="${item.title}">
-                        <span class="facility-badge">${item.categoryLabel}</span>
-                        <div class="facility-card-icon"><i class="${item.icon}"></i></div>
-                    </div>
-                    <div class="facility-card-body">
-                        <h3>${item.title}</h3>
-                        <p>${item.shortDesc}</p>
-                        <div class="facility-card-footer">
-                            <span><i class="fa-regular fa-clock yellow-text"></i> ${item.hours}</span>
-                            <span class="facility-detail-link">Detail <i class="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </div>
-                </article>
-            `).join('');
-        }
-
-        filterButtons.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                filterButtons.forEach((b) => b.classList.remove('active'));
-                btn.classList.add('active');
-                renderFacilities(btn.getAttribute('data-filter'));
-            });
-        });
-
-        const modal = document.getElementById('facility-modal');
-        const modalBackdrop = document.getElementById('modal-backdrop');
-        const closeModalBtn = document.getElementById('close-modal-btn');
-        const closeModalFooterBtn = document.getElementById('close-modal-footer-btn');
-        let activeFacilityTitle = '';
-
-        function openFacilityModal(id) {
-            const facility = facilitiesData.find((item) => item.id === id);
-            if (!facility || !modal) return;
-
-            activeFacilityTitle = facility.title;
-
-            const modalImg = document.getElementById('modal-img');
-            modalImg.src = facility.image;
-            modalImg.alt = facility.title;
-            modalImg.onerror = () => {
-                modalImg.onerror = null;
-                modalImg.src = facility.fallbackImg;
-            };
-
-            document.getElementById('modal-category-badge').textContent = facility.categoryLabel;
-            document.getElementById('modal-title').textContent = facility.title;
-            document.getElementById('modal-hours').textContent = facility.hours;
-            document.getElementById('modal-location').textContent = facility.location;
-            document.getElementById('modal-desc').textContent = facility.fullDesc;
-
-            document.getElementById('modal-features').innerHTML = facility.features.map((feat) => `
-                <li><i class="fa-solid fa-check yellow-text"></i> <span>${feat}</span></li>
-            `).join('');
-
-            modal.classList.add('open');
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeFacilityModal() {
-            if (!modal) return;
-            modal.classList.remove('open');
-            modal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        }
-
-        if (closeModalBtn) closeModalBtn.addEventListener('click', closeFacilityModal);
-        if (closeModalFooterBtn) closeModalFooterBtn.addEventListener('click', closeFacilityModal);
-        if (modalBackdrop) modalBackdrop.addEventListener('click', closeFacilityModal);
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
-                closeFacilityModal();
-            }
-        });
-
-        let toastTimeout;
-        function showToast(title, message) {
-            const toast = document.getElementById('toast-notification');
-            const toastTitle = document.getElementById('toast-title');
-            const toastMessage = document.getElementById('toast-message');
-            if (!toast || !toastTitle || !toastMessage) return;
-
-            toastTitle.textContent = title;
-            toastMessage.textContent = message;
-            toast.classList.add('show');
-
-            clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3500);
-        }
-
-        function reserveFacility() {
-            const label = activeFacilityTitle || 'Fasilitas Hotel';
-            closeFacilityModal();
-            showToast(
-                'Permintaan Jadwal Terkirim',
-                `Akses untuk "${label}" telah dicatat. Tim Concierge akan segera menghubungi Anda.`
-            );
-        }
-
-        const logoutBtn = document.getElementById('logoutBtn');
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', () => {
-                localStorage.clear();
-                sessionStorage.clear();
-            });
-        }
-
-        renderFacilities('semua');
-    </script>
 </body>
 </html>
